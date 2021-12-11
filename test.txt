@@ -15,5 +15,5 @@ stage('jfrog'){
                     
                     server.upload(uploadSpec)
                 }
-              }
-            }
+              }stage
+            }stages in remote
