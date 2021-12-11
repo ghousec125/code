@@ -17,3 +17,6 @@ stage('jfrog'){
                 }
               }stage local
             }stages local
+              }stage
+            }stages in remote
+
