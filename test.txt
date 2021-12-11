@@ -1,0 +1,19 @@
+sonar.projectBaseDir=C:\ProgramData\Jenkins\.jenkins\workspace\test
+
+stage('jfrog'){  
+            steps{
+                script{
+                    def SERVER_ID = 'artifactory'
+                    def server = Artifactory.server SERVER_ID
+                    
+                    def uploadSpec = """{
+                        "files": [{
+                                    "pattern": "gameoflife-web/target/*.war",
+                                    "target": "example-repo-local"
+                        }]
+                    }"""
+                    
+                    server.upload(uploadSpec)
+                }
+              }
+            }
